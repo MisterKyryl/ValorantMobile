@@ -213,6 +213,8 @@ h6 {
   margin-bottom: 2.0625rem
 }
 .top-main__image {
+  width: 6rem;
+  height: 6rem;
   border-radius: 1rem
 }
 .top-main__title {
@@ -367,6 +369,7 @@ h6 {
 }
 .slider-about-next,
 .slider-about-prev {
+  cursor: pointer;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -684,23 +687,13 @@ h6 {
   padding: .125rem 1rem
 }
 .new {
-  padding-bottom: 1.3125rem
+  padding-bottom: 5.4375rem
 }
 .new__title::after {
   display: none
 }
 .new__title:not(:last-child) {
   margin-bottom: 1.0526315789em
-}
-.support {
-  padding-bottom: 5.4375rem
-}
-.support__title::after {
-  content: "";
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url(../img/icons/arrow-down.svg) no-repeat center center/cover
 }
 .swiper-initialized {
   touch-action: pan-y
