@@ -23,7 +23,7 @@
 body,
 html {
   height: 100%;
-  min-width: 414px
+  min-width: 375px
 }
 body {
   color: #5f6367;
@@ -395,8 +395,6 @@ h6 {
   margin-bottom: 1.5rem
 }
 .slider-about__picture {
-  width: 22.875rem;
-  height: 12.75rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.24)
 }
@@ -579,7 +577,6 @@ h6 {
 .body-reviews__item span::before {
   content: "";
   display: block;
-  width: 14.9375rem;
   height: .625rem;
   border-radius: 30px;
   background: #eef0f2
@@ -587,9 +584,6 @@ h6 {
 .body-reviews__item span::before {
   position: absolute;
   background: #00a172
-}
-.body-reviews__item:nth-child(1) span::before {
-  width: 13.5625rem
 }
 .body-reviews__item:nth-child(2) span::before {
   width: 1.5rem
@@ -757,4 +751,53 @@ h6 {
 }
 .swiper-button-disabled {
   display: none
+}
+@media (min-width:26.25em) {
+  .slider-about__picture {
+    width: 22.875rem
+  }
+}
+@media (min-width:26.875em) {
+  .slider-about__picture {
+    height: 12.75rem
+  }
+  .body-reviews__item span::after,
+  .body-reviews__item span::before {
+    width: 14.9375rem
+  }
+  .body-reviews__item:nth-child(1) span::before {
+    width: 13.5625rem
+  }
+}
+@media (max-width:23.4375em) {
+  .slider-about__picture {
+    width: 20.4375rem
+  }
+  .slider-about__picture {
+    height: 12.125rem
+  }
+  .body-reviews__item span::after,
+  .body-reviews__item span::before {
+    width: 12.5rem
+  }
+  .body-reviews__item:nth-child(1) span::before {
+    width: 11.0625rem
+  }
+}
+@media (min-width:23.4375em)and (max-width:26.25em) {
+  .slider-about__picture {
+    width: clamp(20.4375rem ,.125rem + 86.6666666667vw ,22.875rem)
+  }
+}
+@media (min-width:23.4375em)and (max-width:26.875em) {
+  .slider-about__picture {
+    height: clamp(12.125rem ,7.8636363636rem + 18.1818181818vw ,12.75rem)
+  }
+  .body-reviews__item span::after,
+  .body-reviews__item span::before {
+    width: clamp(12.5rem ,-4.1193181818rem + 70.9090909091vw ,14.9375rem)
+  }
+  .body-reviews__item:nth-child(1) span::before {
+    width: clamp(11.0625rem ,-5.9829545455rem + 72.7272727273vw ,13.5625rem)
+  }
 }
